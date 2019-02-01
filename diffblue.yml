@@ -1,0 +1,1042 @@
+# Tested on Deeptest release 1.10.0
+cbmcArguments:
+  cover-function-only: false
+  depth: false
+  do-not-test-methods-with-access: [ private ]
+  java-generate-no-comments: true
+  no-trivial-tests: true
+phases:
+-
+  timeout: 300
+  cbmcArguments:
+    java-assume-inputs-non-null: true
+    max-nondet-array-length: 10
+    string-non-empty: true
+    unwind: 1
+-
+  timeout: 300
+  cbmcArguments:
+    max-nondet-array-length: 20
+    unwind: 2
+-
+  timeout: 300
+  cbmcArguments:
+    max-nondet-array-length: 30
+    max-nondet-string-length: 10
+    unwind: 3
+units:
+  - target:
+    - dir: Mage.Client/target/classes
+      file: mage/client/dialog/NewTableDialog.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/dialog/NewTableDialog.java
+    # Child of NewTableDialog.class
+    - dir: Mage/target/classes
+      file: mage/cards/decks/importer/DeckImporter.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/cards/decks/importer/DeckImporter.java
+    # Child of NewTableDialog.class
+    - dir: Mage.Client/target/classes
+      file: mage/client/MageFrame.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/MageFrame.java
+    # Child of NewTableDialog.class
+    - dir: Mage.Client/target/classes
+      file: mage/client/SessionHandler.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/SessionHandler.java
+    # Child of NewTableDialog.class
+    - dir: Mage.Client/target/classes
+      file: mage/client/components/MageComponents.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/components/MageComponents.java
+    # Child of NewTableDialog.class
+    - dir: Mage.Client/target/classes
+      file: mage/client/table/TablePlayerPanel.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/table/TablePlayerPanel.java
+    # Child of NewTableDialog.class
+    - dir: Mage.Client/target/classes
+      file: mage/client/util/Event.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/util/Event.java
+    # Child of NewTableDialog.class
+    - dir: Mage.Client/target/classes
+      file: mage/client/util/IgnoreList.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/util/IgnoreList.java
+    # Child of NewTableDialog.class
+    - dir: Mage.Client/target/classes
+      file: mage/client/util/Listener.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/util/Listener.java
+    # Child of NewTableDialog.class
+    - dir: Mage/target/classes
+      file: mage/constants/MatchTimeLimit.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/constants/MatchTimeLimit.java
+    # Child of NewTableDialog.class
+    - dir: Mage/target/classes
+      file: mage/constants/MultiplayerAttackOption.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/constants/MultiplayerAttackOption.java
+    # Child of NewTableDialog.class
+    - dir: Mage/target/classes
+      file: mage/constants/RangeOfInfluence.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/constants/RangeOfInfluence.java
+    # Child of NewTableDialog.class
+    - dir: Mage/target/classes
+      file: mage/constants/SkillLevel.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/constants/SkillLevel.java
+    # Child of NewTableDialog.class
+    - dir: Mage/target/classes
+      file: mage/game/match/MatchOptions.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/game/match/MatchOptions.java
+    # Child of NewTableDialog.class
+    - dir: Mage/target/classes
+      file: mage/players/PlayerType.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/players/PlayerType.java
+    # Child of NewTableDialog.class
+    - dir: Mage.Common/target/classes
+      file: mage/view/GameTypeView.class
+      sourceDir: Mage.Common/src/main/java
+      sourceFile: mage/view/GameTypeView.java
+    # Child of NewTableDialog.class
+    - dir: Mage.Common/target/classes
+      file: mage/view/TableView.class
+      sourceDir: Mage.Common/src/main/java
+      sourceFile: mage/view/TableView.java
+  - target:
+    - dir: Mage.Client/target/classes
+      file: mage/client/dialog/NewTournamentDialog.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/dialog/NewTournamentDialog.java
+    # Child of NewTournamentDialog.class
+    - dir: Mage/target/classes
+      file: mage/cards/decks/Deck.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/cards/decks/Deck.java
+    # Child of NewTournamentDialog.class
+    - dir: Mage/target/classes
+      file: mage/cards/repository/ExpansionInfo.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/cards/repository/ExpansionInfo.java
+    # Child of NewTournamentDialog.class
+    - dir: Mage/target/classes
+      file: mage/cards/repository/ExpansionRepository.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/cards/repository/ExpansionRepository.java
+    # Child of NewTournamentDialog.class
+    - dir: Mage.Client/target/classes
+      file: mage/client/table/TournamentPlayerPanel.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/table/TournamentPlayerPanel.java
+    # Child of NewTournamentDialog.class
+    - dir: Mage.Client/target/classes
+      file: mage/client/util/gui/FastSearchUtil.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/util/gui/FastSearchUtil.java
+    # Child of NewTournamentDialog.class
+    - dir: Mage/target/classes
+      file: mage/game/GameException.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/game/GameException.java
+    # Child of NewTournamentDialog.class
+    - dir: Mage/target/classes
+      file: mage/game/draft/DraftOptions.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/game/draft/DraftOptions.java
+    # Child of NewTournamentDialog.class
+    - dir: Mage/target/classes
+      file: mage/game/tournament/LimitedOptions.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/game/tournament/LimitedOptions.java
+    # Child of NewTournamentDialog.class
+    - dir: Mage/target/classes
+      file: mage/game/tournament/TournamentOptions.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/game/tournament/TournamentOptions.java
+    # Child of NewTournamentDialog.class
+    - dir: Mage.Common/target/classes
+      file: mage/view/TournamentTypeView.class
+      sourceDir: Mage.Common/src/main/java
+      sourceFile: mage/view/TournamentTypeView.java
+  - target:
+    - dir: Mage.Sets/target/classes
+      file: mage/cards/r/Realmwright.class
+      sourceDir: Mage.Sets/src
+      sourceFile: mage/cards/r/Realmwright.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/MageInt.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/MageInt.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/abilities/Ability.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/Ability.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/abilities/common/AsEntersBattlefieldAbility.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/common/AsEntersBattlefieldAbility.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/abilities/common/SimpleStaticAbility.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/common/SimpleStaticAbility.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/ContinuousEffectImpl.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/ContinuousEffectImpl.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/ChooseBasicLandTypeEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/ChooseBasicLandTypeEffect.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/abilities/mana/BlackManaAbility.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/mana/BlackManaAbility.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/abilities/mana/BlueManaAbility.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/mana/BlueManaAbility.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/abilities/mana/GreenManaAbility.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/mana/GreenManaAbility.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/abilities/mana/RedManaAbility.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/mana/RedManaAbility.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/abilities/mana/WhiteManaAbility.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/mana/WhiteManaAbility.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/cards/CardImpl.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/cards/CardImpl.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/cards/CardSetInfo.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/cards/CardSetInfo.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/constants/CardType.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/constants/CardType.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/constants/SubType.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/constants/SubType.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/constants/Duration.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/constants/Duration.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/constants/Layer.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/constants/Layer.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/constants/Outcome.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/constants/Outcome.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/constants/SubLayer.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/constants/SubLayer.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/constants/Zone.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/constants/Zone.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/filter/common/FilterControlledLandPermanent.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/common/FilterControlledLandPermanent.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/game/Game.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/game/Game.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/game/permanent/Permanent.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/game/permanent/Permanent.java
+    # Child of Realmwright.class
+    - dir: Mage/target/classes
+      file: mage/players/Player.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/players/Player.java
+  - target:
+    - dir: Mage.Client/target/classes
+      file: mage/client/game/PlayerPanelExt.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/game/PlayerPanelExt.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage/target/classes
+      file: mage/cards/decks/importer/DckDeckImporter.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/cards/decks/importer/DckDeckImporter.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage.Client/target/classes
+      file: mage/client/cards/BigCard.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/cards/BigCard.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage.Client/target/classes
+      file: mage/client/components/HoverButton.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/components/HoverButton.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage.Client/target/classes
+      file: mage/client/components/MageRoundPane.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/components/MageRoundPane.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage.Client/target/classes
+      file: mage/client/components/ext/dlg/DialogManager.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/components/ext/dlg/DialogManager.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage.Client/target/classes
+      file: mage/client/dialog/PreferencesDialog.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/dialog/PreferencesDialog.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage.Client/target/classes
+      file: mage/client/util/CardsViewUtil.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/util/CardsViewUtil.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage.Client/target/classes
+      file: mage/client/util/ImageHelper.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/util/ImageHelper.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage.Client/target/classes
+      file: mage/client/util/gui/BufferedImageBuilder.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/util/gui/BufferedImageBuilder.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage.Client/target/classes
+      file: mage/client/util/gui/countryBox/CountryUtil.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: mage/client/util/gui/countryBox/CountryUtil.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage.Common/target/classes
+      file: mage/components/ImagePanel.class
+      sourceDir: Mage.Common/src/main/java
+      sourceFile: mage/components/ImagePanel.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage.Common/target/classes
+      file: mage/components/ImagePanelStyle.class
+      sourceDir: Mage.Common/src/main/java
+      sourceFile: mage/components/ImagePanelStyle.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage.Sets/target/classes
+      file: mage/cards/m/Mindstatic.class
+      sourceDir: Mage.Sets/src
+      sourceFile: mage/cards/m/Mindstatic.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage/target/classes
+      file: mage/constants/ManaType.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/constants/ManaType.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage/target/classes
+      file: mage/counters/Counter.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/counters/Counter.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage/target/classes
+      file: mage/counters/CounterType.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/counters/CounterType.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage/target/classes
+      file: mage/designations/DesignationType.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/designations/DesignationType.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage.Common/target/classes
+      file: mage/utils/timer/PriorityTimer.class
+      sourceDir: Mage.Common/src/main/java
+      sourceFile: mage/utils/timer/PriorityTimer.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage.Common/target/classes
+      file: mage/view/CardView.class
+      sourceDir: Mage.Common/src/main/java
+      sourceFile: mage/view/CardView.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage.Common/target/classes
+      file: mage/view/ManaPoolView.class
+      sourceDir: Mage.Common/src/main/java
+      sourceFile: mage/view/ManaPoolView.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage.Common/target/classes
+      file: mage/view/PlayerView.class
+      sourceDir: Mage.Common/src/main/java
+      sourceFile: mage/view/PlayerView.java
+    # Child of PlayerPanelExt.class
+    - dir: Mage.Client/target/classes
+      file: org/mage/card/arcane/ManaSymbols.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: org/mage/card/arcane/ManaSymbols.java
+  - target:
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/continuous/BecomesCreatureAttachedWithActivatedAbilityOrSpellEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/continuous/BecomesCreatureAttachedWithActivatedAbilityOrSpellEffect.java
+  - target:
+    - dir: Mage.Sets/target/classes
+      file: mage/cards/u/UrzaAcademyHeadmaster.class
+      sourceDir: Mage.Sets/src
+      sourceFile: mage/cards/u/UrzaAcademyHeadmaster.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/Mana.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/Mana.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/LoyaltyAbility.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/LoyaltyAbility.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/common/PlaneswalkerEntersWithLoyaltyCountersAbility.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/common/PlaneswalkerEntersWithLoyaltyCountersAbility.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/dynamicvalue/common/ControllerLifeCount.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/dynamicvalue/common/ControllerLifeCount.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/dynamicvalue/common/PermanentsOnBattlefieldCount.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/dynamicvalue/common/PermanentsOnBattlefieldCount.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/dynamicvalue/common/PermanentsTargetOpponentControlsCount.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/dynamicvalue/common/PermanentsTargetOpponentControlsCount.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/ContinuousEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/ContinuousEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/Effect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/Effect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/OneShotEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/OneShotEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/CreateTokenEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/CreateTokenEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/DamageAllControlledTargetEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/DamageAllControlledTargetEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/DamageAllEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/DamageAllEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/DamageTargetEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/DamageTargetEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/DestroyAllControlledTargetEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/DestroyAllControlledTargetEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/DestroyTargetEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/DestroyTargetEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/DrawCardSourceControllerEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/DrawCardSourceControllerEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/ExileFromZoneTargetEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/ExileFromZoneTargetEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/ExileTargetEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/ExileTargetEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/GainLifeEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/GainLifeEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/GetEmblemEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/GetEmblemEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/LookLibraryAndPickControllerEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/LookLibraryAndPickControllerEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/LoseLifeSourceControllerEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/LoseLifeSourceControllerEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/PutCardFromHandOntoBattlefieldEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/PutCardFromHandOntoBattlefieldEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/PutLibraryIntoGraveTargetEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/PutLibraryIntoGraveTargetEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/ReturnFromGraveyardToBattlefieldTargetEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/ReturnFromGraveyardToBattlefieldTargetEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/RevealLibraryPutIntoHandEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/RevealLibraryPutIntoHandEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/SacrificeEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/SacrificeEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/ShuffleHandGraveyardAllEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/ShuffleHandGraveyardAllEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/continuous/BoostControlledEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/continuous/BoostControlledEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/continuous/BoostTargetEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/continuous/BoostTargetEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/continuous/GainAbilityControlledEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/continuous/GainAbilityControlledEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/continuous/GainAbilityTargetEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/continuous/GainAbilityTargetEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/continuous/GainControlTargetEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/continuous/GainControlTargetEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/counter/AddCountersSourceEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/counter/AddCountersSourceEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/counter/DistributeCountersEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/counter/DistributeCountersEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/discard/DiscardControllerEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/discard/DiscardControllerEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/discard/DiscardTargetEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/discard/DiscardTargetEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/search/SearchLibraryPutInHandEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/search/SearchLibraryPutInHandEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/turn/ControlTargetPlayerNextTurnEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/turn/ControlTargetPlayerNextTurnEffect.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/keyword/FirstStrikeAbility.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/keyword/FirstStrikeAbility.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/keyword/LifelinkAbility.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/keyword/LifelinkAbility.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/abilities/keyword/VigilanceAbility.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/keyword/VigilanceAbility.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/cards/Card.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/cards/Card.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/choices/Choice.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/choices/Choice.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/choices/ChoiceImpl.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/choices/ChoiceImpl.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/filter/FilterCard.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/FilterCard.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/filter/FilterPermanent.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/FilterPermanent.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/filter/StaticFilters.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/StaticFilters.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/filter/common/FilterArtifactCard.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/common/FilterArtifactCard.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/filter/common/FilterControlledCreaturePermanent.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/common/FilterControlledCreaturePermanent.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/filter/common/FilterCreatureCard.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/common/FilterCreatureCard.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/filter/common/FilterCreaturePermanent.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/common/FilterCreaturePermanent.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/filter/common/FilterLandPermanent.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/common/FilterLandPermanent.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/filter/common/FilterPermanentCard.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/common/FilterPermanentCard.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/filter/predicate/Predicates.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/predicate/Predicates.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/filter/predicate/mageobject/CardTypePredicate.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/predicate/mageobject/CardTypePredicate.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/filter/predicate/permanent/ControllerPredicate.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/predicate/permanent/ControllerPredicate.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/game/command/emblems/AjaniSteadfastEmblem.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/game/command/emblems/AjaniSteadfastEmblem.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/game/command/emblems/DomriRadeEmblem.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/game/command/emblems/DomriRadeEmblem.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/game/command/emblems/ElspethKnightErrantEmblem.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/game/command/emblems/ElspethKnightErrantEmblem.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/game/command/emblems/GideonAllyOfZendikarEmblem.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/game/command/emblems/GideonAllyOfZendikarEmblem.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/game/command/emblems/KioraMasterOfTheDepthsEmblem.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/game/command/emblems/KioraMasterOfTheDepthsEmblem.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/game/command/emblems/VenserTheSojournerEmblem.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/game/command/emblems/VenserTheSojournerEmblem.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/target/Target.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/target/Target.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/target/TargetPermanent.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/target/TargetPermanent.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/target/TargetPlayer.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/target/TargetPlayer.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/target/common/TargetAnyTarget.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/target/common/TargetAnyTarget.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/target/common/TargetCardInGraveyard.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/target/common/TargetCardInGraveyard.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/target/common/TargetCardInHand.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/target/common/TargetCardInHand.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/target/common/TargetCardInLibrary.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/target/common/TargetCardInLibrary.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/target/common/TargetCreaturePermanent.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/target/common/TargetCreaturePermanent.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/target/common/TargetCreaturePermanentAmount.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/target/common/TargetCreaturePermanentAmount.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/target/common/TargetNonlandPermanent.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/target/common/TargetNonlandPermanent.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/target/common/TargetOpponent.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/target/common/TargetOpponent.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/target/common/TargetPlayerOrPlaneswalker.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/target/common/TargetPlayerOrPlaneswalker.java
+    # Child of UrzaAcademyHeadmaster.class
+    - dir: Mage/target/classes
+      file: mage/util/RandomUtil.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/util/RandomUtil.java
+  - target:
+    - dir: Mage.Sets/target/classes
+      file: mage/cards/c/Camouflage.class
+      sourceDir: Mage.Sets/src
+      sourceFile: mage/cards/c/Camouflage.java
+    # Child of Camouflage.class
+    - dir: Mage/target/classes
+      file: mage/abilities/common/CastOnlyDuringPhaseStepSourceAbility.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/common/CastOnlyDuringPhaseStepSourceAbility.java
+    # Child of Camouflage.class
+    - dir: Mage/target/classes
+      file: mage/abilities/condition/common/MyTurnCondition.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/condition/common/MyTurnCondition.java
+    # Child of Camouflage.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/ContinuousRuleModifyingEffectImpl.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/ContinuousRuleModifyingEffectImpl.java
+    # Child of Camouflage.class
+    - dir: Mage/target/classes
+      file: mage/constants/PhaseStep.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/constants/PhaseStep.java
+    # Child of Camouflage.class
+    - dir: Mage/target/classes
+      file: mage/filter/predicate/permanent/PermanentInListPredicate.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/predicate/permanent/PermanentInListPredicate.java
+    # Child of Camouflage.class
+    - dir: Mage/target/classes
+      file: mage/game/combat/CombatGroup.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/game/combat/CombatGroup.java
+    # Child of Camouflage.class
+    - dir: Mage/target/classes
+      file: mage/game/events/GameEvent.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/game/events/GameEvent.java
+    # Child of Camouflage.class
+    - dir: Mage/target/classes
+      file: mage/target/common/TargetControlledCreaturePermanent.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/target/common/TargetControlledCreaturePermanent.java
+  - target:
+    - dir: Mage/target/classes
+      file: mage/abilities/costs/common/RemoveCounterCost.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/costs/common/RemoveCounterCost.java
+    # Child of RemoveCounterCost.class
+    - dir: Mage/target/classes
+      file: mage/abilities/costs/Cost.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/costs/Cost.java
+    # Child of RemoveCounterCost.class
+    - dir: Mage/target/classes
+      file: mage/abilities/costs/CostImpl.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/costs/CostImpl.java
+    # Child of RemoveCounterCost.class
+    - dir: Mage/target/classes
+      file: mage/util/CardUtil.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/util/CardUtil.java
+  - target:
+    - dir: Mage.Client/target/classes
+      file: org/mage/card/arcane/TextboxRuleParser.class
+      sourceDir: Mage.Client/src/main/java
+      sourceFile: org/mage/card/arcane/TextboxRuleParser.java
+  - target:
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/continuous/BecomesCreatureAttachedEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/continuous/BecomesCreatureAttachedEffect.java
+    # Child of BecomesCreatureAttachedEffect.class
+    - dir: Mage/target/classes
+      file: mage/game/permanent/token/Token.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/game/permanent/token/Token.java
+  - target:
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/continuous/BecomesBasicLandEnchantedEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/continuous/BecomesBasicLandEnchantedEffect.java
+  - target:
+    - dir: Mage/target/classes
+      file: mage/game/combat/Combat.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/game/combat/Combat.java
+    # Child of Combat.class
+    - dir: Mage/target/classes
+      file: mage/MageObject.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/MageObject.java
+    # Child of Combat.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/RequirementEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/RequirementEffect.java
+    # Child of Combat.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/RestrictionEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/RestrictionEffect.java
+    # Child of Combat.class
+    - dir: Mage/target/classes
+      file: mage/abilities/keyword/BandingAbility.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/keyword/BandingAbility.java
+    # Child of Combat.class
+    - dir: Mage/target/classes
+      file: mage/abilities/keyword/BandsWithOtherAbility.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/keyword/BandsWithOtherAbility.java
+    # Child of Combat.class
+    - dir: Mage/target/classes
+      file: mage/abilities/keyword/special/JohanVigilanceAbility.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/keyword/special/JohanVigilanceAbility.java
+    # Child of Combat.class
+    - dir: Mage/target/classes
+      file: mage/filter/common/FilterCreatureForCombatBlock.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/common/FilterCreatureForCombatBlock.java
+    # Child of Combat.class
+    - dir: Mage/target/classes
+      file: mage/filter/predicate/Predicate.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/predicate/Predicate.java
+    # Child of Combat.class
+    - dir: Mage/target/classes
+      file: mage/filter/predicate/mageobject/AbilityPredicate.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/predicate/mageobject/AbilityPredicate.java
+    # Child of Combat.class
+    - dir: Mage/target/classes
+      file: mage/filter/predicate/mageobject/NamePredicate.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/predicate/mageobject/NamePredicate.java
+    # Child of Combat.class
+    - dir: Mage/target/classes
+      file: mage/filter/predicate/mageobject/SubtypePredicate.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/predicate/mageobject/SubtypePredicate.java
+    # Child of Combat.class
+    - dir: Mage/target/classes
+      file: mage/filter/predicate/mageobject/SupertypePredicate.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/predicate/mageobject/SupertypePredicate.java
+    # Child of Combat.class
+    - dir: Mage/target/classes
+      file: mage/filter/predicate/permanent/AttackingSameNotBandedPredicate.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/predicate/permanent/AttackingSameNotBandedPredicate.java
+    # Child of Combat.class
+    - dir: Mage/target/classes
+      file: mage/filter/predicate/permanent/PermanentIdPredicate.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/filter/predicate/permanent/PermanentIdPredicate.java
+    # Child of Combat.class
+    - dir: Mage/target/classes
+      file: mage/players/PlayerList.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/players/PlayerList.java
+    # Child of Combat.class
+    - dir: Mage/target/classes
+      file: mage/target/common/TargetControlledPermanent.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/target/common/TargetControlledPermanent.java
+    # Child of Combat.class
+    - dir: Mage/target/classes
+      file: mage/target/common/TargetDefender.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/target/common/TargetDefender.java
+    # Child of Combat.class
+    - dir: Mage/target/classes
+      file: mage/util/Copyable.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/util/Copyable.java
+    # Child of Combat.class
+    - dir: Mage/target/classes
+      file: mage/util/trace/TraceUtil.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/util/trace/TraceUtil.java
+  - target:
+    - dir: Mage.Sets/target/classes
+      file: mage/cards/c/CairnWanderer.class
+      sourceDir: Mage.Sets/src
+      sourceFile: mage/cards/c/CairnWanderer.java
+    # Child of CairnWanderer.class
+    - dir: Mage/target/classes
+      file: mage/abilities/MageSingleton.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/MageSingleton.java
+  - target:
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/common/counter/ProliferateEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/common/counter/ProliferateEffect.java
+    # Child of ProliferateEffect.class
+    - dir: Mage/target/classes
+      file: mage/target/common/TargetPermanentOrPlayerWithCounter.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/target/common/TargetPermanentOrPlayerWithCounter.java
+  - target:
+    - dir: Mage.Sets/target/classes
+      file: mage/cards/p/PathOfAncestry.class
+      sourceDir: Mage.Sets/src
+      sourceFile: mage/cards/p/PathOfAncestry.java
+    # Child of PathOfAncestry.class
+    - dir: Mage/target/classes
+      file: mage/abilities/TriggeredAbilityImpl.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/TriggeredAbilityImpl.java
+    # Child of PathOfAncestry.class
+    - dir: Mage/target/classes
+      file: mage/abilities/common/EntersBattlefieldTappedAbility.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/common/EntersBattlefieldTappedAbility.java
+    # Child of PathOfAncestry.class
+    - dir: Mage/target/classes
+      file: mage/abilities/effects/keyword/ScryEffect.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/effects/keyword/ScryEffect.java
+    # Child of PathOfAncestry.class
+    - dir: Mage/target/classes
+      file: mage/abilities/keyword/ChangelingAbility.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/keyword/ChangelingAbility.java
+    # Child of PathOfAncestry.class
+    - dir: Mage/target/classes
+      file: mage/abilities/mana/CommanderColorIdentityManaAbility.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/abilities/mana/CommanderColorIdentityManaAbility.java
+    # Child of PathOfAncestry.class
+    - dir: Mage/target/classes
+      file: mage/constants/SubTypeSet.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/constants/SubTypeSet.java
+    # Child of PathOfAncestry.class
+    - dir: Mage/target/classes
+      file: mage/game/stack/Spell.class
+      sourceDir: Mage/src/main/java
+      sourceFile: mage/game/stack/Spell.java
